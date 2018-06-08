@@ -2,5 +2,14 @@
 
 <div id="app">
     <p>{msg}</p>
+    <ol>
+         <todo-item
+      v-for="item in groceryList"
+      v-bind:todo="item"
+      v-bind:key="item.id">
+    </todo-item>
+    </ol>
+    <button v-on:click="reverseMessage">Click</button>
+    <input v-model="msg">
 </div>
 <script src="{% static 'bundle.js' %}"></script>
